@@ -43,11 +43,10 @@ app.UseAuthentication();
 app.UseAuthorization();
 app.MapControllers();
 
-// Exercise 2 smoke test — uncomment only to test buggy version
-// app.MapGet("/api/enrollments/worker-smoke", (EnrollmentWorker worker) =>
-// {
-//     worker.ProcessBatch();
-//     return Results.Ok("processed");
-// });
+app.MapGet("/api/enrollments/worker-smoke", (EnrollmentWorker worker) =>
+{
+    worker.ProcessBatch();
+    return Results.Ok("processed");
+});
 
 app.Run();
