@@ -1,3 +1,4 @@
+using TmsApi.Services;
 namespace TmsApi.Workers;
 
 public class EnrollmentWorker(IServiceScopeFactory scopeFactory)
